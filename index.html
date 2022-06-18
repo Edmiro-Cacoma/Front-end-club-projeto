@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Copiar este link👇👇👇 na descrição do vídeo -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!-- link☝️☝️☝️ para usar icones do fontawesome-->
+
+    <!-- Link para baixar as imagens aqui usadas na descrição do -->
+
+    <!-- link css-->
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Bike Landing Page</title>
+
+</head>
+
+
+
+<body onmousemove="showOffPopup()">
+    <header>
+        <a href="" class="logo">Bike</a>
+
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Products</a>
+            <a href="#">Blog</a>
+        </nav>
+    </header>
+
+    <section class="container">
+
+        <div class="content">
+            <h3>Bicicletas para corridas</h3>
+            <p id="paragraphy"></p>
+            <a href="#" onclick="showPopup()" class="btn">Adicione ao carrinho <i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+
+        <div class="image">
+
+            <div  class="cart-popup" >
+                <span class="popup-text" id="popup">Adicionado com sucesso</span>
+            </div>
+
+            <img src="images/PNG-images-Cycle-17png.png" alt="" class="bike active">
+            <img src="images/PNG-images-Cycle-18png.png" alt="" class="bike">
+            <img src="images/PNG-images-Cycle-2png.png" alt="" class="bike">
+        </div>
+
+        <div onclick="previous()" class="left">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+
+        <div onclick="next()" class="right">
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

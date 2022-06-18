@@ -1,0 +1,192 @@
+/*!-- Copiar este link👇👇👇 na descrição do vídeo*/
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,700&display=swap");
+
+/*link☝️☝️☝️ para usar a font Nunito do google fonts */
+
+:root {
+    --primary-color: #b4f2fb;
+}
+
+* {
+    font-family: "Nunito", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+body img {
+    max-width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 45px;
+    color: #333;
+    margin-left: 20px;
+}
+
+header .navbar a {
+    padding: 10px;
+    margin-right: 10px;
+    color: #666;
+    font-size: 20px;
+}
+
+header .navbar a:hover {
+    color: rgb(144, 200, 248);
+}
+
+.container {
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 9%;
+    position: relative;
+}
+
+.container .content {
+    flex: 1 1 400px;
+}
+
+.image {
+    flex: 1 1 500px;
+    position: relative;
+    border-radius: 60%;
+    height: 450px;
+    width: 350px;
+    background-color: var(--primary-color);
+}
+
+.image .bike {
+    width: 100%;
+    transform: rotate(-15deg);
+    display: none;
+    position: absolute;
+    top: 8%;
+}
+
+.image .active {
+    display: inline;
+    transform: rotate(-15deg);
+    animation: animate 0.5s cubic-bezier(0.45, 1.63, 0.98, 1.55);
+    
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg) scale(0.7);
+    }
+}
+
+.container .content h3 {
+    color: #333;
+    font-size: 25px;
+    padding: 5px 0;
+}
+
+.container .content .btn {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 17px;
+    padding: 9px 40px;
+    background-color: #333;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.container .content .btn:hover {
+    background-color: #999;
+}
+
+.container .left,
+.container .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    border: 2px solid #333;
+    color: #333;
+    line-height: 45px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.container .left {
+    left: 30px;
+}
+
+.container .right {
+    right: 30px;
+}
+
+.container .left:hover,
+.container .right:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.image .cart-popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cart-popup .popup-text {
+    position: absolute;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    z-index: 1;
+    margin-left: 250px;
+    visibility: hidden;
+}
+
+.cart-popup .popup-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+ .cart-popup  .show{
+    visibility: visible;
+    animation: fadeIn 1s;
+}
